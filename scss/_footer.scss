@@ -1,0 +1,131 @@
+.footer {
+    background: #101010;
+    color: var(--white);
+    padding: 20px 0 40px;
+    overflow: hidden;
+}
+.footer-top {
+    padding: 60px 0px 80px;
+
+    @include breakpoint('mobile') {
+        padding: 60px 20px 80px;
+    }
+    h5 {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 12px;
+        font-weight: 300;
+        color: var(--gray);
+        line-height: 19px;
+    }
+    .email-field {
+        position: relative;
+        margin-top: 35px;
+        input {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--gray);
+            font-size: 12px;
+            padding: 7px 10px;
+            color: var(--gray);
+        }
+        svg {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 10px;
+            top: 9px;
+        }
+    }
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            width: 22%;
+            margin: 4px;
+
+            @include breakpoint('mobile') {
+                width: 23%;
+            }
+            @include breakpoint('smobile') {
+                width: 22%;
+            }
+        }
+    }
+    .tweet {
+        padding-right: 80px;
+        @include breakpoint('mobile') {
+            padding-right: 0px;
+        }
+        span {
+            color: var(--white);
+            font-weight: 500;
+        }
+        img {
+            width: 20px;
+        }
+    }
+
+    .col-sm-6 {
+        @include breakpoint('mobile') {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.footer-bottom {
+    .brand-wrapper {
+        @include breakpoint('mobile') {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .brand {
+        img {
+            width: 80px;
+        }
+    }
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        font-size: 12px;
+        padding: 12px 0;
+        
+        p {
+            margin: 0;
+
+            a {
+                color: var(--gray);
+            }
+        }
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+
+        a {
+            margin-right: 10px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+
+            &:hover {
+                background: var(--blue);
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

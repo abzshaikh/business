@@ -1,0 +1,155 @@
+@import "./mixin";
+
+.banner-container {
+    padding: 0;
+}
+.carousel {
+    // top: -70px;
+
+    // @include breakpoint('medium') {
+    //     top: 0px;
+    // }
+    .carousel-inner {
+        .carousel-item {
+            height: 100vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .carousel-caption {
+                left: 0%;
+                right: 40%;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding-left: 220px;
+                text-align: left;
+
+                @include breakpoint('medium') {
+                    padding-left: 100px;
+                }
+                @include breakpoint('mobile') {
+                    padding-left: 40px;
+                }
+                @include breakpoint('smobile') {
+                    padding: 0 20px;
+                }
+
+                h6 {
+                    text-transform: uppercase;
+                    letter-spacing: 9px;
+                    color: var(--black);
+                    font-size: 14px;
+                }
+
+                h1 {
+                    text-transform: uppercase;
+                    color: var(--blue);
+                    letter-spacing: 2px;
+                    margin-bottom: 30px;
+                }
+
+                a {
+                    text-transform: uppercase;
+                    border: 2px solid var(--black);
+                    border-radius: 45px;
+                    font-size: 10px;
+                    padding: 10px 25px;
+                    margin-right: 15px;
+                    letter-spacing: 2px;
+                    font-weight: 700;
+                    color: var(--black);
+                    transition: all 0.5s;
+
+                    @include breakpoint('smobile') {
+                        margin-right: 0;
+                        margin-bottom: 12px;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        background: var(--black);
+                        color: var(--white);
+                    }
+
+                    &.service-btn {
+                        background: var(--black);
+                        color: var(--white);
+
+                        &:hover {
+                            background: transparent;
+                            color: var(--black);
+                        }
+                    }
+                }
+
+                p {
+                    color: var(--black);
+                    font-size: 18px;
+                    margin-bottom: 60px;
+                }
+
+                .button-wrapper {
+                    display: flex;
+
+                    @include breakpoint('smobile') {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-control-next {
+        width: 6%;
+        background: transparent;
+        transition: all 0.5s;
+        &:hover {
+            background: rgba(0, 0, 0, 0.11);
+        }
+
+        .carousel-control-next-icon {
+            height: 50px;
+            width: 50px;
+            outline: black;
+            background-size: 100%, 100%;
+            background-image: none;
+
+            &:after {
+                content: url('../images/icons/next.svg');
+                font-size: 55px;
+                color: red;
+            }
+        }
+    } 
+    
+    .carousel-control-prev {
+        width: 6%;
+        background: transparent;
+        transition: all 0.5s;
+        &:hover {
+            background: rgba(0, 0, 0, 0.11);
+        }
+
+        .carousel-control-prev-icon {
+            height: 50px;
+            width: 50px;
+            outline: black;
+            background-size: 100%, 100%;
+            background-image: none;
+
+            &:after {
+                content: url('../images/icons/previous.svg');
+                font-size: 55px;
+                color: red;
+            }
+        }
+    }
+}

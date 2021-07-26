@@ -1,0 +1,77 @@
+@import "./mixin";
+
+@import "./carousal";
+@import "./nav";
+@import "./cards";
+@import "./slider";
+@import "./footer";
+
+
+:root {
+    --black: #3d3d3d;
+    --white: #ffffff;
+    --blue: #3b9aff;
+    --offwhite: #f5f5f5;
+    --gray: #a6a6a6;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.contact-block {
+    .motto {
+        font-size: 23px;
+        padding: 50px 0px 50px 20px;
+        margin: 0;
+    }
+    
+    .contact-number-wrapper {
+        padding: 60px 30px;
+        display: flex;
+        align-items: center;
+
+        .icon-wrapper {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: -1px 3px 3px 0px #d2d2d2;        
+        }
+
+        .phone-wrapper {
+            margin-left: 30px;
+
+            p {
+                margin: 0;
+                font-size: 13px;
+
+                &.number {
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.partner-block {
+    background: var(--blue);
+    padding: 30px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100px;
+        object-fit: scale-down;
+    }
+}
